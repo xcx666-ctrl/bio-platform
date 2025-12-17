@@ -1,0 +1,12 @@
+{
+  "plugin": "enrichment",
+  "input": {
+    "type": "gene_list_background",
+    "gene_list_path": "plugins/enrichment/data/gene_list.txt",
+    "background_path": "plugins/enrichment/data/background.txt"
+  },
+  "parameters": {
+    "organism": "human",
+    "ontology": "BP"
+  }
+}

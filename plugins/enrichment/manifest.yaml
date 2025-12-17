@@ -1,0 +1,7 @@
+{
+  "name": "enrichment",
+  "version": "0.1.0",
+  "description": "GO/KEGG/GSEA enrichment for human gene sets (extensible to other species).",
+  "inputs": ["deg_table", "gene_list_background"],
+  "entrypoint": "enrichment.R"
+}

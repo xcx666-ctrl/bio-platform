@@ -1,0 +1,18 @@
+{
+  "plugin": "enrichment",
+  "input": {
+    "type": "deg_table",
+    "deg_path": "plugins/enrichment/data/deg_example.csv",
+    "log2fc_cutoff": 1.0,
+    "padj_cutoff": 0.05
+  },
+  "parameters": {
+    "organism": "human",
+    "ontology": "BP",
+    "gsea": {
+      "pvalue_cutoff": 0.25,
+      "min_size": 5,
+      "max_size": 500
+    }
+  }
+}

@@ -1,0 +1,14 @@
+plugin: differential_expression
+input:
+  type: counts
+  counts_path: path to TSV matrix (first column gene, header row contains sample IDs)
+  sample_sheet: path to TSV with columns sample, condition
+parameters:
+  reference_condition: optional reference condition (defaults to first factor level)
+  design: ~ condition (fixed)
+outputs:
+  tables/deseq2_results.tsv: columns gene, baseMean, log2FC, pvalue, padj, stat
+  reports/qc.html: PCA, sample distances, size factors summary
+  metadata.json: includes parameter snapshot, versions, input hashes
+compatibility:
+  tables/deseq2_results.tsv can be used as enrichment input with input.type=deg_table
