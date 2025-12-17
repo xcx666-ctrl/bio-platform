@@ -1,0 +1,11 @@
+{
+  "plugin": "differential_expression",
+  "input": {
+    "type": "counts",
+    "counts_path": "plugins/differential_expression/data/counts.tsv",
+    "sample_sheet": "plugins/differential_expression/data/samples.tsv"
+  },
+  "parameters": {
+    "reference_condition": "control"
+  }
+}

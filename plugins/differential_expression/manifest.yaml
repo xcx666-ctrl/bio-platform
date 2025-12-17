@@ -1,0 +1,7 @@
+{
+  "name": "differential_expression",
+  "version": "0.1.0",
+  "description": "DESeq2-based differential expression (counts + sample sheet).",
+  "inputs": ["counts"],
+  "entrypoint": "differential_expression.R"
+}

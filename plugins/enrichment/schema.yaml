@@ -1,0 +1,19 @@
+# Configuration schema for the enrichment plugin
+# This is informational for users; validation is performed in Python.
+plugin: enrichment
+input:
+  type: one of [deg_table, gene_list_background]
+  deg_table:
+    deg_path: path to CSV/TSV with columns gene, log2FC, pvalue, padj
+    log2fc_cutoff: numeric threshold for absolute log2FC (default 1.0)
+    padj_cutoff: numeric threshold for adjusted p-value (default 0.05)
+  gene_list_background:
+    gene_list_path: path to newline-delimited gene symbols
+    background_path: path to newline-delimited background gene symbols
+parameters:
+  organism: default human (org.Hs.eg.db); extend by adding other OrgDb packages
+  ontology: BP (default), or CC/MF for GO
+  gsea:
+    pvalue_cutoff: 0.25 (default)
+    min_size: 10 (default)
+    max_size: 500 (default)

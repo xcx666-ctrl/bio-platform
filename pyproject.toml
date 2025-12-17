@@ -1,0 +1,18 @@
+[project]
+name = "biokit"
+version = "0.1.0"
+description = "Local-first bioinformatics analysis CLI with plugin architecture"
+authors = [{name = "Bio Platform Maintainers"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.12",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+biokit = "biokit.cli:app"
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
